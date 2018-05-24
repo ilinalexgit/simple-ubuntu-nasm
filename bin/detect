@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# this pack is valid for all apps
+exit 0
