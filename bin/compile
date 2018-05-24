@@ -20,6 +20,8 @@ chmod +x $vendor_dir/nasm/bin/*
 PATH=$PATH:$vendor_dir/nasm/bin
 
 echo "-----> TEST $PATH"
+echo "-----> TEST $cache_dir"
+echo "-----> TEST $build_dir"
 nasm -v
 echo "-----> TEST END"
 
