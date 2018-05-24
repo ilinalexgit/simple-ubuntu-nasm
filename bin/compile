@@ -4,7 +4,7 @@ build_dir=$1
 cache_dir=$2
 env_dir=$3
 
-vendor_dir="$HOME/vendor"
+vendor_dir="$build_dir/vendor"
 
 echo "-----> Installing NASM $VERSION"
 
