@@ -1,5 +1,11 @@
 #!/bin/sh
 
+build_dir=$1
+cache_dir=$2
+env_dir=$3
+
+vendor_dir="$build_dir/vendor2"
+
 NVERSION="2.11"
 curl https://www.nasm.us/pub/nasm/releasebuilds/$NVERSION/nasm-$NVERSION.tar.gz -s | tar xz
 cd nasm-$NVERSION
