@@ -6,6 +6,8 @@ env_dir=$3
 
 vendor_dir="$build_dir/vendor2"
 
+echo "-----> Installing NASM $VERSION"
+
 NVERSION="2.11"
 curl https://www.nasm.us/pub/nasm/releasebuilds/$NVERSION/nasm-$NVERSION.tar.gz -s | tar xz
 cd nasm-$NVERSION
@@ -16,5 +18,7 @@ mv nasm $vendor_dir/nasm/bin
 chmod +x $vendor_dir/nasm/bin/*
 
 PATH=$PATH:$vendor_dir/nasm/bin
+
+echo "-----> TEST $PATH"
 
 exit 0
