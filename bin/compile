@@ -23,7 +23,6 @@ echo "-----> TEST $PATH"
 echo "-----> TEST $cache_dir"
 echo "-----> TEST $build_dir"
 nasm -v
-nasm -h
 echo "-----> TEST END"
 
 exit 0
