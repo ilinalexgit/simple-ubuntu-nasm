@@ -4,7 +4,7 @@ build_dir=$1
 cache_dir=$2
 env_dir=$3
 
-vendor_dir="$build_dir/vendor"
+vendor_dir="$HOME/vendor"
 
 echo "-----> Installing NASM $VERSION"
 
@@ -20,5 +20,7 @@ chmod +x $vendor_dir/nasm/bin/*
 PATH=$PATH:$vendor_dir/nasm/bin
 
 echo "-----> TEST $PATH"
+nasm -v
+echo "-----> TEST END"
 
 exit 0
