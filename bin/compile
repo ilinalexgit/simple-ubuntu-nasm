@@ -8,16 +8,7 @@ vendor_dir="$build_dir/vendor"
 
 echo "-----> Installing NASM $VERSION"
 
-NVERSION="2.11"
-curl https://www.nasm.us/pub/nasm/releasebuilds/$NVERSION/nasm-$NVERSION.tar.gz -s | tar xz
-cd nasm-$NVERSION
-./configure >/dev/null 2>&1 && make >/dev/null 2>&1 && make install >/dev/null 2>&1
-
-mkdir -p $vendor_dir/nasm/bin
-mv nasm $vendor_dir/nasm/bin
-chmod +x $vendor_dir/nasm/bin/*
-
-PATH=$PATH:$vendor_dir/nasm/bin
+apt-get install nasm
 
 echo "-----> TEST $PATH"
 echo "-----> TEST $cache_dir"
