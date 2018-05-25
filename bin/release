@@ -1,5 +1,0 @@
-echo "---"
-echo "addons:"
-echo "config_vars:"
-echo "  PATH: $PATH:/app/vendor/nasm/bin"
-echo "default_process_types:"
