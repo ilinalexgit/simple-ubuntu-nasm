@@ -8,6 +8,7 @@ vendor_dir="$build_dir/vendor"
 
 echo "-----> Installing NASM $VERSION"
 
+apt-get update
 apt-get install nasm
 
 echo "-----> TEST $PATH"
