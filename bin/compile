@@ -25,6 +25,9 @@ echo "-----> TEST $build_dir"
 echo "-----> TEST $env_dir"
 
 nasm -v
+  
+echo "export PATH" > $build_dir/export
+
 echo "-----> TEST END"
 
 exit 0
