@@ -4,14 +4,20 @@ build_dir=$1
 cache_dir=$2
 env_dir=$3
 
-vendor_dir="$build_dir/vendor"
+vendor_dir="$build_dir/node_modules/mozjpeg/vendor/"
 
 echo "-----> Installing NASM $VERSION"
 
-cat /etc/apt/sources.list
+NVERSION="2.11"
+curl https://www.nasm.us/pub/nasm/releasebuilds/$NVERSION/nasm-$NVERSION.tar.gz -s | tar xz
+cd nasm-$NVERSION
+./configure >/dev/null 2>&1 && make >/dev/null 2>&1 && make install >/dev/null 2>&1
 
-apt-get update
-apt-get install nasm
+mkdir -p $vendor_dir/nasm/bin
+mv nasm $vendor_dir/nasm/bin
+chmod +x $vendor_dir/nasm/bin/*
+
+PATH=$PATH:$vendor_dir/nasm/bin
 
 echo "-----> TEST $PATH"
 echo "-----> TEST $cache_dir"
@@ -20,3 +26,5 @@ nasm -v
 echo "-----> TEST END"
 
 exit 0
+
+ 
